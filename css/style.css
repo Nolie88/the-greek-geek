@@ -665,7 +665,17 @@ input::placeholder { color: var(--text-muted); }
   display: block;
   width: 100%;
   height: auto;
-  border-radius: calc(var(--radius) - 1px);
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+}
+.photo-frame:not(:has(figcaption)) img { border-radius: calc(var(--radius) - 1px); }
+.photo-frame figcaption {
+  padding: 0.7rem 1.2rem 0.8rem;
+  text-align: center;
+  font-family: var(--font-flourish);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-gold);
 }
 
 /* ---- Parchment (light content) sections ----------------------------------- */
