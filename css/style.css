@@ -1263,7 +1263,22 @@ body.cook-mode .step.is-current .step__text {
   cursor: pointer;
   transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
 }
-.roll-btn img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.roll-btn__clip {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.roll-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2);
+}
 .roll-btn:hover, .roll-btn:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 0 24px rgba(212, 175, 55, 0.5);

@@ -450,7 +450,7 @@ window.GG = (function () {
   roll.className = "roll-btn";
   roll.setAttribute("aria-label", "Roll for a random recipe");
   roll.innerHTML = `
-    <img src="assets/mascot/miso-d20.png" alt="" width="64" height="64">
+    <span class="roll-btn__clip" aria-hidden="true"><img src="assets/mascot/miso-d20.png" alt="" width="64" height="64"></span>
     <span class="roll-num" aria-hidden="true"></span>`;
   document.body.appendChild(roll);
 
