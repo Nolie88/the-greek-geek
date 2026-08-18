@@ -324,6 +324,7 @@ p { margin: 0 0 1em; }
   width: clamp(72px, 10vw, 110px);
   flex-shrink: 0;
 }
+.section-heading img.miso-accent--md { width: clamp(108px, 15vw, 165px); }
 .section-heading img.miso-accent--lg { width: clamp(144px, 20vw, 220px); }
 .section-heading h2 { margin: 0; }
 .section-heading .kicker {
