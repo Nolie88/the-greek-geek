@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Greek Geek — A Recipe Grimoire for Hungry Nerds</title>
+  <meta name="description" content="Healthy, geek-flavoured recipes with real macros. Cook well, level up.">
+  <meta property="og:site_name" content="The Greek Geek">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Greek Geek — A Recipe Grimoire for Hungry Nerds">
+  <meta property="og:description" content="Healthy, geek-flavoured recipes with real macros. Cook well, level up.">
+  <meta property="og:image" content="assets/mascot/miso-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1a2035">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23d4af37' d='M12 1.6 L14.6 9.4 L22.4 12 L14.6 14.6 L12 22.4 L9.4 14.6 L1.6 12 L9.4 9.4 Z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">The Greek <span class="logo-mark">Geek</span> <span aria-hidden="true">✦</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="recipes.html">The Grimoire</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="diary.html">Diary</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="recipes.html?focus=search" aria-label="Search recipes">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </a>
+        <a class="btn btn--ember btn--sm" href="#" aria-disabled="true">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__particles" aria-hidden="true"><canvas></canvas></div>
+      <div class="container hero__inner">
+        <div>
+          <p class="hero__eyebrow">A recipe grimoire for hungry nerds</p>
+          <h1 class="hero__title">Cook Well.<br><em>Level Up.</em></h1>
+          <p class="hero__mission">Healthy, geek-flavoured recipes with real macros — because nerds deserve better than instant noodles.</p>
+          <a class="btn" href="recipes.html">✦ Browse the Grimoire</a>
+        </div>
+        <img class="hero__miso miso-float" src="assets/mascot/miso-hero.png" alt="Miso, a small cheerful kitchen spirit with a wooden spoon, waving hello" width="677" height="369">
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+    <!-- LATEST RECIPES -->
+    <section class="section container" aria-labelledby="latest-heading">
+      <div class="section-heading reveal">
+        <img class="miso-accent miso-accent--lg miso-float" src="assets/mascot/miso-cooking.png" alt="" width="677" height="369">
+        <div>
+          <span class="kicker">Fresh from the cauldron</span>
+          <h2 id="latest-heading">Latest Recipes</h2>
+        </div>
+      </div>
+      <div class="card-grid" id="latest-grid"></div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+    <!-- RECIPE OF THE WEEK -->
+    <section class="section container" aria-labelledby="rotw-heading">
+      <h2 id="rotw-heading" class="visually-hidden">Recipe of the Week</h2>
+      <div class="feature-panel panel ornate reveal" id="rotw-panel">
+        <span class="corners" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+    <!-- ABOUT TEASER -->
+    <section class="section container" aria-labelledby="about-heading">
+      <div class="about-teaser panel ornate reveal">
+        <span class="corners" aria-hidden="true"></span>
+        <img class="about-teaser__miso miso-float" src="assets/mascot/miso-avatar.png" alt="Miso the kitchen spirit, smiling with starry eyes" width="432" height="578">
+        <div>
+          <span class="kicker" style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);margin-bottom:0.35rem;">About the cook</span>
+          <h2 id="about-heading">A Greek, a geek, and a very small kitchen spirit</h2>
+          <p>I'm a home cook raised on my yiayia's village cooking and an unhealthy number of RPGs. This grimoire is where the two meet: real, healthy food with the stats to prove it — and Miso, my kitchen companion, floating quality control.</p>
+          <a class="btn btn--teal btn--sm" href="about.html">Read the full lore</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+    <!-- NEWSLETTER -->
+    <section class="section container" aria-labelledby="newsletter-heading">
+      <div class="newsletter panel ornate reveal">
+        <span class="corners" aria-hidden="true"></span>
+        <h2 id="newsletter-heading">Join the Guild</h2>
+        <p class="lede" style="color:var(--text-muted);max-width:48ch;margin-inline:auto;">One email a week: a new recipe, a nerd note, and whatever I learned by setting off the smoke alarm so you don't have to.</p>
+        <form data-newsletter>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@tavern.gg" required autocomplete="email">
+          <button class="btn" type="submit">Enlist</button>
+        </form>
+        <div class="form-success" role="status" tabindex="-1">
+          <img src="assets/mascot/miso-victory.png" alt="" width="677" height="369">
+          <span>Quest accepted! Check your inbox to confirm.</span>
+        </div>
+        <p class="form-note">No spam, ever. Unsubscribe with one click.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">The Greek <span class="logo-mark">Geek</span> <span aria-hidden="true">✦</span></a>
+          <p>Healthy recipes for nerds and geeks who want to cook well — with macros, lore, and a kitchen spirit named Miso.</p>
+          <img class="footer-miso" src="assets/mascot/miso-404.png" alt="Miso asleep on a cushion, hugging two wooden spoons" width="677" height="369">
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">The Grimoire</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="diary.html">Diary</a></li>
+          </ul>
+        </nav>
+        <div class="footer-newsletter">
+          <h4>Join the Guild</h4>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin:0;">A weekly recipe scroll, straight to your inbox.</p>
+          <form data-newsletter>
+            <label class="visually-hidden" for="footer-email">Email address</label>
+            <input type="email" id="footer-email" name="email" placeholder="you@tavern.gg" required autocomplete="email">
+            <button class="btn btn--sm" type="submit">Enlist</button>
+          </form>
+          <div class="form-success" role="status" tabindex="-1">
+            <img src="assets/mascot/miso-victory.png" alt="" width="677" height="369">
+            <span>Quest accepted!</span>
+          </div>
+          <div class="social-row" aria-label="Social links (coming soon)">
+            <a class="icon-btn" href="#" aria-label="Instagram (coming soon)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+            <a class="icon-btn" href="#" aria-label="YouTube (coming soon)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+            <a class="icon-btn" href="#" aria-label="TikTok (coming soon)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4c.5 2.5 2.5 4.5 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> The Greek Geek. All rights reserved.</span>
+        <span>Crafted with olive oil &amp; XP.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data/recipes.js"></script>
+  <script src="js/favourites.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
