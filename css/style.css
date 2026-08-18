@@ -654,6 +654,20 @@ input::placeholder { color: var(--text-muted); }
   font-size: 1.05rem;
 }
 
+/* ---- Photo frame (uncropped image in gold-cornered frame) ------------------ */
+.photo-frame {
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) - 1px);
+}
+
 /* ---- Parchment (light content) sections ----------------------------------- */
 .parchment-panel {
   background: var(--parchment);
