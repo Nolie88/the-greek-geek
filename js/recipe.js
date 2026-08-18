@@ -95,7 +95,7 @@
     "@type": "Recipe",
     name: recipe.title,
     description: recipe.excerpt,
-    image: new URL("assets/mascot/miso-cooking.png", document.baseURI).href,
+    image: new URL(recipe.heroImage || "assets/mascot/miso-cooking.png", document.baseURI).href,
     author: { "@type": "Person", name: "The Greek Geek" },
     datePublished: recipe.publishedAt,
     prepTime: "PT" + recipe.prepMinutes + "M",
@@ -133,8 +133,15 @@
   /* ---- Hero frame ------------------------------------------------------------ */
   const frame = document.getElementById("r-frame");
   frame.style.background = recipe.heroGradient;
-  frame.setAttribute("aria-label", "Placeholder artwork for " + recipe.title);
-  document.getElementById("r-frame-emoji").textContent = recipe.heroEmoji;
+  if (recipe.heroImage) {
+    frame.setAttribute("aria-label", recipe.title);
+    document.getElementById("r-frame-emoji").remove();
+    frame.insertAdjacentHTML("beforeend",
+      `<img src="${GG.escapeHtml(recipe.heroImage)}" alt="">`);
+  } else {
+    frame.setAttribute("aria-label", "Placeholder artwork for " + recipe.title);
+    document.getElementById("r-frame-emoji").textContent = recipe.heroEmoji;
+  }
 
   /* ---- Stats panel ------------------------------------------------------------ */
   // Reference maxes for the bar meters (rough single-meal ceilings).
