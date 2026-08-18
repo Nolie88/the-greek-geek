@@ -1044,14 +1044,14 @@ body.cook-mode .toast { bottom: 96px; }
 .nerd-note {
   position: relative;
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
-  padding-top: 30px;
+  padding-top: 46px;
 }
 .nerd-note .parchment-panel { padding: 1.6rem 1.8rem 1.5rem; }
 .nerd-note__miso {
   position: absolute;
-  top: -34px;
+  top: -52px;
   right: 18px;
-  width: clamp(96px, 12vw, 130px);
+  width: clamp(144px, 18vw, 195px);
   z-index: 1;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
 }
