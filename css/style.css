@@ -112,10 +112,19 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--border-gold);
+}
+/* Glass layer lives on a pseudo-element: backdrop-filter on the header itself
+   would make it the containing block for the fixed mobile drawer inside it,
+   collapsing the drawer to the header's 72px height. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(26, 32, 53, 0.45);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-gold);
 }
 .site-header__inner {
   display: flex;
@@ -774,7 +783,7 @@ main { animation: page-fade 320ms var(--ease-out); }
 .nav-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 125;
+  z-index: 90; /* below the header's stacking context so the drawer inside it stays above the veil */
   background: rgba(10, 13, 26, 0.55);
   opacity: 0;
   pointer-events: none;
